@@ -62,7 +62,7 @@ nav a:hover {
 
 /* ==== HERO ==== */
 .hero {
-  background: url('../img/ambiente.jpg') center/cover no-repeat;
+  background: url('../img/background.jpg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -169,6 +169,25 @@ section {
   color: #555;
 }
 
+/* === Responsividade para celulares === */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* 🔧 Força uma coluna única */
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .card img {
+    height: auto; /* Ajusta a altura da imagem */
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 /* ==== CONTATO ==== */
 .contato {
   background: #000000;
@@ -190,27 +209,25 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ==== RESPONSIVIDADE ==== */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .btn {
-    padding: 0.7rem 1.2rem;
+    width: 80%;
+  }
+
+  nav ul li {
+    margin-left: 1rem;
+  }
+
+  .logo {
+    height: 50px;
   }
 }
