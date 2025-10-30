@@ -170,7 +170,7 @@ section {
 }
 
 /* === Responsividade para celulares === */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .cards {
     grid-template-columns: 1fr; /* 🔧 Força uma coluna única */
     gap: 1.5rem;
